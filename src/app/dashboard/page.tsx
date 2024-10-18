@@ -4,7 +4,7 @@ import { useContext } from 'react';
 import { AuthContext } from '../auth-context';
 import Link from 'next/link';
 
-export function Dashboard() {
+export default function Dashboard() {
     const authContext = useContext(AuthContext);
 
     if (!authContext?.isAuthenticated) {
@@ -19,5 +19,3 @@ export function Dashboard() {
         </div>
     );
 }
-
-export default Dashboard;
